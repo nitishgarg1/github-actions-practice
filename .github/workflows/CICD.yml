@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: test
-        run: echo "testing code'
+        run: echo 'testing code'
   deploy_job:
     runs-on: ubuntu-22.04
     steps:
