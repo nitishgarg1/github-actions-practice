@@ -10,16 +10,19 @@ jobs:
         run: echo 'cloning code'
 
   build_job:
+    needs: [clone_job]
     runs-on: ubuntu-22.04
     steps:
       - name: build
         run: echo 'building code'
   test_job:
+    needs: [build_job]
     runs-on: ubuntu-22.04
     steps:
       - name: test
         run: echo 'testing code'
   deploy_job:
+    needs: [test_job]
     runs-on: ubuntu-22.04
     steps:
       - name: deploy
