@@ -1,0 +1,14 @@
+name: Auto_Linter
+
+on:
+ push:
+   paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: clone_code
+        uses: actions/checkout@v4
+      - name: install_lint
+        run: pip install ruff
